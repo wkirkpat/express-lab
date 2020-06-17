@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post("/sub-form", (req, res) => {
   let sub = JSON.stringify({ name: req.body.name, email: req.body.email });
-  fs.appendFileSync("subs.json", `${sub}\n`);
+  fs.appendFileSync("form-subs.json", `${sub}\n`);
   res.send("Thank you");
 });
 
